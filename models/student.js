@@ -4,9 +4,9 @@ var statustypes = ["active","inactive"];
 
 var studentSchema = new mongoose.Schema({
   name      : {type: String, required: true},
-  rollNo    : {type: Number, required: true},
+  rollNo    : {type: Number, required: true,unique: true},
   password  : {type: String, required: true},
-  phone     : {type: Number, required: true},
+  phone     : {type: Number, required: true,unique: true},
   bloodGroup : {type: String},
   address   :
   {
@@ -16,7 +16,7 @@ var studentSchema = new mongoose.Schema({
     state : {type: String},
     pincode : {type: String}
   },
-  email     : {type: String, required: true},
+  email     : {type: String, required: true,unique: true},
   dob       : {type: Date},
   deptId    : {type: mongoose.Schema.Types.ObjectId, ref:'dept'},
   status    : {type:String,enum:statustypes},
