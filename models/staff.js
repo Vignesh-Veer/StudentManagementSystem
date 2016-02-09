@@ -19,7 +19,7 @@ var staffSchema = new mongoose.Schema({
   dob       : {type: Date},
   status    : {type:String,enum:statustypes},
   deptId    : {type: mongoose.Schema.Types.ObjectId, ref:'dept'},
-  createdAt : {type: Date},
+  createdAt : {type: Date,default: Date.now},
   updatedAt : {type: Date},
 }, {collection: 'staff'});
 

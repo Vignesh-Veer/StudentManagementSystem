@@ -20,7 +20,7 @@ var studentSchema = new mongoose.Schema({
   dob       : {type: Date},
   deptId    : {type: mongoose.Schema.Types.ObjectId, ref:'dept'},
   status    : {type:String,enum:statustypes},
-  createdAt : {type: Date},
+  createdAt : {type: Date,default: Date.now},
   updatedAt : {type: Date},
 }, {collection : 'student'});
 
