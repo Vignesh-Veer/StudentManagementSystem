@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var statustypes = ["active","inactive"];
+var statustypes = ["Active","Inactive"];
 
 var staffSchema = new mongoose.Schema({
   name      : {type: String, required: true},

@@ -1,12 +1,12 @@
 var mongoose = require('mongoose');
 
-var statustypes = ["active","inactive"];
+var statustypes = ["Active","Inactive"];
 
 var studentSchema = new mongoose.Schema({
   name      : {type: String, required: true},
   rollNo    : {type: Number, required: true,unique: true},
   password  : {type: String, required: true},
-  phone     : {type: Number, required: true,unique: true},
+  phone     : {type: String, required: true,unique: true},
   bloodGroup : {type: String},
   address   :
   {
