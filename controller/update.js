@@ -10,14 +10,11 @@ exports.updatestudent = function(req, res, next){
   var rollNo = req.body.rollNo;
   var phone = req.body.phone;
   var bloodGroup = req.body.bloodGroup;
-  //var address   =
-  //{
-    var doorNo = req.body.doorNo;
-    var street = req.body.street;
-    var city = req.body.city;
-    var state = req.body.state;
-    var pincode = req.body.pincode;
-  //};
+  var doorNo = req.body.doorNo;
+  var street = req.body.street;
+  var city = req.body.city;
+  var state = req.body.state;
+  var pincode = req.body.pincode;
   var email = req.body.email;
   var dob = req.body.dob;
   var deptId = req.body.deptId;
@@ -29,14 +26,11 @@ exports.updatestudent = function(req, res, next){
    student.rollNo = rollNo;
    student.phone = phone;
    student.bloodGroup = bloodGroup;
-  // student.address   =
-   //{
-     student.doorNo = doorNo;
-     student.street = street;
-     student.city = city;
-     student.state = state;
-     student.pincode = pincode;
-   //},
+   student.doorNo = doorNo;
+   student.street = street;
+   student.city = city;
+   student.state = state;
+   student.pincode = pincode;
    student.email = email;
    student.dob = dob;
    student.deptId = deptId;
@@ -52,14 +46,11 @@ exports.updatestaff = function(req, res, next){
   var name = req.body.name;
   var staffId = req.body.staffId;
   var phone = req.body.phone;
-  //var address   =
-  //{
-    var doorNo = req.body.doorNo;
-    var street = req.body.street;
-    var city = req.body.city;
-    var state = req.body.state;
-    var pincode = req.body.pincode;
-  //},
+  var doorNo = req.body.doorNo;
+  var street = req.body.street;
+  var city = req.body.city;
+  var state = req.body.state;
+  var pincode = req.body.pincode;
   var email = req.body.email;
   var dob = req.body.dob;
   var deptId = req.body.deptId;
@@ -71,14 +62,11 @@ exports.updatestaff = function(req, res, next){
    staff.rollNo = rollNo;
    staff.phone = phone;
    staff.bloodGroup = bloodGroup;
-   //staff.address   =
-   //{
-     staff.doorNo = doorNo;
-     staff.street = street;
-     staff.city = city;
-     staff.state = state;
-     staff.pincode = pincode;
-   //},
+   staff.doorNo = doorNo;
+   staff.street = street;
+   staff.city = city;
+   staff.state = state;
+   staff.pincode = pincode;
    staff.email = email;
    staff.dob = dob;
    staff.deptId = deptId;

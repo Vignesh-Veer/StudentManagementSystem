@@ -8,14 +8,11 @@ var studentSchema = new mongoose.Schema({
   password  : {type: String, required: true},
   phone     : {type: String, required: true,unique: true},
   bloodGroup : {type: String},
-  address   :
-  {
-    doorNo : {type: String},
-    street : {type: String},
-    city : {type: String},
-    state : {type: String},
-    pincode : {type: String}
-  },
+  doorNo : {type: String},
+  street : {type: String},
+  city : {type: String},
+  state : {type: String},
+  pincode : {type: String},
   email     : {type: String, required: true,unique: true},
   dob       : {type: Date},
   deptId    : {type: mongoose.Schema.Types.ObjectId, ref:'dept'},

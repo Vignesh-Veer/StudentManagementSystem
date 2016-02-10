@@ -7,14 +7,11 @@ var staffSchema = new mongoose.Schema({
   staffId   : {type: Number, required: true,unique: true},
   password  : {type: String, required: true},
   phone     : {type: Number, required: true,unique: true},
-  address   :
-  {
-    doorNo : {type: String},
-    street : {type: String},
-    city   : {type: String},
-    state  : {type: String},
-    pincode : {type: String}
-  },
+  doorNo : {type: String},
+  street : {type: String},
+  city   : {type: String},
+  state  : {type: String},
+  pincode : {type: String},
   email     : {type: String, required: true,unique: true},
   dob       : {type: Date},
   status    : {type:String,enum:statustypes},
