@@ -21,7 +21,7 @@ node {
   notifyStarted()
  
   /* ... existing build steps ... */
-}
+//}
  
 /*def notifyStarted() {
   // send to email
