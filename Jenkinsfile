@@ -16,14 +16,14 @@ node {
    step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
 }
 
-node {
+/*node {
  
   notifyStarted()
  
   /* ... existing build steps ... */
 }
  
-def notifyStarted() {
+/*def notifyStarted() {
   // send to email
   emailext (
       subject: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
@@ -31,4 +31,36 @@ def notifyStarted() {
         <p>Check console output at "<a href="${env.BUILD_URL}">${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>"</p>""",
       recipientProviders: [[$class: 'DevelopersRecipientProvider']]
     )
+}*/
+
+pipeline {
+    agent any
+
+    stages {
+
+        // Normal Stages
+
+        stage ('success'){
+            steps {
+                script {
+                    currentBuild.result = 'SUCCESS'
+                }
+            }
+        }
+    }
+
+    post {
+        failure {
+            script {
+                currentBuild.result = 'FAILURE'
+            }
+        }
+
+        always {
+            step([$class: 'Mailer',
+                notifyEveryUnstableBuild: true,
+                recipients: "priyasapo@gmail.com",
+                sendToIndividuals: true])
+        }
+    }
 }
